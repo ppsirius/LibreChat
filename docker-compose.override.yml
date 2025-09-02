@@ -11,18 +11,13 @@
 
 # EXAMPLE: if you want to use the config file and the latest numbered release docker image the result will be:
 
-
 services:
   api:
-    build:
-      context: .
+    volumes:
+    - type: bind
+      source: ./librechat.yaml
+      target: /app/librechat.yaml
     image: ghcr.io/ppsirius/librechat:latest
-    ports: []      # disable port mapping for CI
-    environment:
-      UID: 1000
-      GID: 1000
-      MEILI_MASTER_KEY: dummykey
-      PORT: 3000
 
 # ---------------------------------------------------
 

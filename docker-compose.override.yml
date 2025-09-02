@@ -11,13 +11,13 @@
 
 # EXAMPLE: if you want to use the config file and the latest numbered release docker image the result will be:
 
-# services:
-#   api:
-#     volumes:
-#     - type: bind
-#       source: ./librechat.yaml
-#       target: /app/librechat.yaml
-#     image: ghcr.io/danny-avila/librechat:latest
+services:
+  api:
+    volumes:
+    - type: bind
+      source: ./librechat.yaml
+      target: /app/librechat.yaml
+    image: ghcr.io/ppsirius/librechat:latest
 
 # ---------------------------------------------------
 
